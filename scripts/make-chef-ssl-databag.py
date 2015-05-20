@@ -7,7 +7,7 @@ parser = argparse.ArgumentParser()
 parser.add_argument("--id", help="Item id", required=True)
 parser.add_argument("--key", help="SSL key (PEM format)", required=True)
 parser.add_argument("--cert", help="SSL cert (PEM format)", required=True)
-parser.add_argument("--dhparm", help="dhparm file (PEM format)", required=False)
+parser.add_argument("--dhparam", help="dhparam file (PEM format)", required=False)
 parser.add_argument("--ca", help="CA bundle file (PEM format)", required=False)
 args = parser.parse_args()
 
@@ -26,8 +26,8 @@ databag = {
     'cert': flatten_pem(args.cert),
 }
 
-if args.dhparm:
-    databag['dhparm'] = flatten_pem(args.dhparm)
+if args.dhparam:
+    databag['dhparam'] = flatten_pem(args.dhparam)
 
 if args.ca:
     databag['ca'] = flatten_pem(args.ca)
