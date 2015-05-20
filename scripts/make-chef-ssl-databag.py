@@ -32,4 +32,4 @@ if args.dhparam:
 if args.ca:
     databag['ca'] = flatten_pem(args.ca)
 
-print databag
+print json.dumps(databag)
