@@ -43,7 +43,7 @@ $ knife data bag from file mybag ssl.json --secret-file you_really_should_encryp
     <td>SSL dhparam file in PEM format</td>
   </tr>
   <tr>
-    <td>--dhparam</td>
+    <td>--ca</td>
     <td>Yes</td>
     <td>SSL CA file and intermediates in PEM format (for local chain-of-trust, ie OCSP stapling)</td>
   </tr>
